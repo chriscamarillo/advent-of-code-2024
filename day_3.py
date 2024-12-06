@@ -28,11 +28,6 @@ def solve_part_2(memory):
     
     return mul_sum
 
-def sum_line(line):
-    mul_ops = mul_pattern.findall(line)
-    return sum(parse_mul(op) for op in mul_ops)
-
-
 def parse_mul(mul_op):
     left_op, right_op = arg_pattern.search(mul_op).groups()
     left_op, right_op = int(left_op), int(right_op)
